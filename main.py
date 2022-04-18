@@ -23,7 +23,7 @@ client = tweepy.Client(BT)
 # client.create_tweet(text="succeeded")
 
 user_id = "77907829"
-tweet_data = []  # ツイートの保存
+tweet_data = []
 tweets = client.get_users_tweets(user_id, max_results=5)
 for tweet in tweets.data:
     tweet_data.append(tweet.text)
