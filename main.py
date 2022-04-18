@@ -24,7 +24,6 @@ client = tweepy.Client(BT)
 
 user_id = "77907829"
 tweet_data = []  # ツイートの保存
-
 tweets = client.get_users_tweets(user_id, max_results=5)
 for tweet in tweets.data:
     tweet_data.append(tweet.text)
