@@ -29,7 +29,7 @@ USER_ID = "77907829"
 tweet_data = []
 # until_id=""
 
-for tweet in tweepy.Paginator(client.get_users_tweets, id=USER_ID, max_results=100, exclude="retweets", until_id="1496108330921594889").flatten(limit=200):
+for tweet in tweepy.Paginator(client.get_users_tweets, id=USER_ID, max_results=100, exclude="retweets", until_id="1490665756861743110").flatten(limit=200):
     tweet_data.append([tweet.id, tweet.text.replace("\n", "<n>")])
 
 print("\n-------------------------------\n".join(["Tweet ID: "+str(x[0])+"\n"+x[1] for x in tweet_data]))
