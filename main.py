@@ -29,15 +29,14 @@ USER_ID = "77907829"
 tweet_data = []
 # until_id=""
 
-with open(CSV_PATH, mode="a", encoding="utf-8") as f:
-    writer = csv.writer(f)
-    for tweet in tweepy.Paginator(client.get_users_tweets, id=USER_ID, max_results=100, exclude="retweets", until_id="1508413604181078016").flatten(limit=200):
-        tweet_data.append([tweet.id, tweet.text.replace("\n", "<n>")])
-        writer.writerow([tweet.id, tweet.text.replace("\n", "<n>")])
+for tweet in tweepy.Paginator(client.get_users_tweets, id=USER_ID, max_results=100, exclude="retweets", until_id="1496108330921594889").flatten(limit=200):
+    tweet_data.append([tweet.id, tweet.text.replace("\n", "<n>")])
 
 print("\n-------------------------------\n".join(["Tweet ID: "+str(x[0])+"\n"+x[1] for x in tweet_data]))
 
-
+with open(CSV_PATH, mode="a", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerows(tweet_data)
 
 """
 for page in range(1):
