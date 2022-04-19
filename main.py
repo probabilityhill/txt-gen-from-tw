@@ -28,16 +28,16 @@ client = tweepy.Client(BT)
 USER_ID = "77907829"
 tweet_data = []
 # until_id=""
-for tweet in tweepy.Paginator(client.get_users_tweets, id=USER_ID, max_results=5, exclude="retweets").flatten(limit=5):
-    tweet_data.append([tweet.id, tweet.text])
-print(tweet_data)
+
+with open(CSV_PATH, mode="w", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    for tweet in tweepy.Paginator(client.get_users_tweets, id=USER_ID, max_results=5, exclude="retweets").flatten(limit=5):
+        tweet_data.append([tweet.id, tweet.text.replace("\n", "<n>")])
+        writer.writerow([tweet.id, tweet.text.replace("\n", "<n>")])
+
 print("\n-------------------------------\n".join(["Tweet ID: "+str(x[0])+"\n"+x[1] for x in tweet_data]))
 
-"""
-with open(CSV_PATH, 'a') as f:
-    writer = csv.writer(f)
-    writer.writerow(tweet_data)
-"""
+
 
 """
 for page in range(1):
