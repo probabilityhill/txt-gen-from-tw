@@ -1,6 +1,9 @@
 import os
 from dotenv import load_dotenv
 import tweepy
+import csv
+
+CSV_PATH = ""
 
 # .envを読み込む
 load_dotenv()
@@ -22,13 +25,17 @@ client = tweepy.Client(BT)
 # Tweet "succeeded"
 # client.create_tweet(text="succeeded")
 
-user_id = "77907829"
+USER_ID = "77907829"
 tweet_data = []
-tweets = client.get_users_tweets(user_id, max_results=5)
+tweets = client.get_users_tweets(USER_ID, max_results=5)
 for tweet in tweets.data:
     tweet_data.append(tweet.text)
 
-print("\n".join(tweet_data))
+print("\n------------------\n".join(tweet_data))
+
+with open(CSV_PATH, 'a') as f:
+    writer = csv.writer(f)
+    writer.writerow(tweet_data)
 
 """
 for page in range(1):
