@@ -37,12 +37,3 @@ print("\n-------------------------------\n".join(["Tweet ID: "+str(x[0])+"\n"+x[
 with open(CSV_PATH, mode="a", encoding="utf-8") as f:
     writer = csv.writer(f)
     writer.writerows(tweet_data)
-
-"""
-for page in range(1):
-    tweets = client.get_users_tweets(user_id, max_results=3, pagination_token=page)
-    for tweet in tweets:
-        # print('----------')
-        # print(tweet.text)
-        tweet_data.append([tweet.text])
-"""
