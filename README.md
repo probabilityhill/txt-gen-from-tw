@@ -10,7 +10,7 @@ Susumu Hirasawa ([@hirasawa](https://twitter.com/hirasawa?s=20&t=J14WM1x9LQpCHKv
 + 独特な言葉選び
 + 偶に末尾に「またこんど！！」と書く
 
-<blockquote class="twitter-tweet" data-lang="en" data-theme="dark"><p lang="ja" dir="ltr">パレードオタクが狂気のパレードを渇望する声を聞いた。<br><br>そこで私はブロック塀の上に上って手を広げ、こう言った。<br><br>さあ！ご覧あれ！</p>&mdash; Susumu Hirasawa (@hirasawa) <a href="https://twitter.com/hirasawa/status/1512404379994767369?ref_src=twsrc%5Etfw">April 8, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote><p lang="ja" dir="ltr">パレードオタクが狂気のパレードを渇望する声を聞いた。<br><br>そこで私はブロック塀の上に上って手を広げ、こう言った。<br><br>さあ！ご覧あれ！</p>&mdash; Susumu Hirasawa (@hirasawa) <a href="https://twitter.com/hirasawa/status/1512404379994767369?ref_src=twsrc%5Etfw">April 8, 2022</a></blockquote>
 
 ## 生成例
 ```
