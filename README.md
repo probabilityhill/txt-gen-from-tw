@@ -1,4 +1,4 @@
-# 平沢進氏のツイートを学習して文章生成してみた
+# ツイートを学習して文章生成する
 [![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://console.paperspace.com/github/probabilityhill/txt-gen-from-tw/blob/main/gpt2_tweet.ipynb)
 
 詳しくはこちら → [Qiita記事](https://qiita.com/probabilityhill/items/ff4ff7cf7e3871bc9430)
